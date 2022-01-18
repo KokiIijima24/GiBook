@@ -84,6 +84,65 @@ namespace Gibook.API.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("Gibook.API.Models.Book", b =>
+                {
+                    b.Property<Guid>("BookId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BookId");
+
+                    b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("Gibook.API.Models.GiBook", b =>
+                {
+                    b.Property<Guid>("GiBookId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("GiverId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<Guid>("LocationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("RecieverId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("GiBookId");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("GiverId");
+
+                    b.HasIndex("LocationId");
+
+                    b.HasIndex("RecieverId");
+
+                    b.ToTable("GiBiooks");
+                });
+
+            modelBuilder.Entity("Gibook.API.Models.Location", b =>
+                {
+                    b.Property<Guid>("LocationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("LocationId");
+
+                    b.ToTable("Locations");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -213,6 +272,37 @@ namespace Gibook.API.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Gibook.API.Models.GiBook", b =>
+                {
+                    b.HasOne("Gibook.API.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Gibook.API.Models.AppUser", "Giver")
+                        .WithMany()
+                        .HasForeignKey("GiverId");
+
+                    b.HasOne("Gibook.API.Models.Location", "Location")
+                        .WithMany()
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Gibook.API.Models.AppUser", "Reciever")
+                        .WithMany()
+                        .HasForeignKey("RecieverId");
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Giver");
+
+                    b.Navigation("Location");
+
+                    b.Navigation("Reciever");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
