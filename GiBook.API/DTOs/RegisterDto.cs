@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Gibook.API.DTOs
+namespace GiBook.API.DTOs
 {
   public class RegisterDto
   {

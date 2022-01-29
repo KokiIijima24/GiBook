@@ -1,4 +1,4 @@
-# Gibook.API
+# GiBook.API
 
 ## APIエンドポイント一覧
 

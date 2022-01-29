@@ -1,14 +1,14 @@
 using System.Text;
-using Gibook.API.Models;
-using Gibook.API.Services;
-using Gibook.API.Data;
+using GiBook.API.Models;
+using GiBook.API.Services;
+using GiBook.API.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Gibook.API.Extensions
+namespace GiBook.API.Extensions
 {
   public static class IdentityServiceExtensions
   {

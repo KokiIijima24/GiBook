@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace Gibook.API.Models
+namespace GiBook.API.Models
 {
   public class AppUser : IdentityUser
   {

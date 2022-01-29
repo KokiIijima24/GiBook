@@ -1,14 +1,14 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Gibook.API.DTOs;
-using Gibook.API.Models;
-using Gibook.API.Services;
+using GiBook.API.DTOs;
+using GiBook.API.Models;
+using GiBook.API.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Gibook.API.Controllers
+namespace GiBook.API.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]

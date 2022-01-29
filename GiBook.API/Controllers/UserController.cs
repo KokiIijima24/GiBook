@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
-using Gibook.API.DTOs;
-using Gibook.API.Models;
-using Gibook.API.Data;
+using GiBook.API.DTOs;
+using GiBook.API.Models;
+using GiBook.API.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Gibook.API.Controllers
+namespace GiBook.API.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]

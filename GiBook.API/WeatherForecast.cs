@@ -1,6 +1,6 @@
 using System;
 
-namespace Gibook.API
+namespace GiBook.API
 {
     public class WeatherForecast
     {

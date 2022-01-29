@@ -1,4 +1,4 @@
-namespace Gibook.API.DTOs
+namespace GiBook.API.DTOs
 {
   public class UserDto
   {

@@ -12,10 +12,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Gibook.API.Data;
-using Gibook.API.Extensions;
+using GiBook.API.Data;
+using GiBook.API.Extensions;
 
-namespace Gibook.API
+namespace GiBook.API
 {
     public class Startup
     {

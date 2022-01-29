@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Gibook.API.Models
+namespace GiBook.API
 {
   public class Book
   {

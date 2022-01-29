@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Gibook.API</RootNamespace>
+    <RootNamespace>GiBook.API</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

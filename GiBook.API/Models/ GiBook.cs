@@ -1,8 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using GiBook.API.Models;
 
-namespace Gibook.API.Models
+namespace GiBook.API
 {
   public class GiBook
   {
