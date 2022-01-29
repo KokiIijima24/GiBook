@@ -30,7 +30,7 @@ namespace GiBook.API.Controllers
         ///
         /// </summary>
         /// <returns></returns>
-        [HttpGet("list")]
+        [HttpGet]
         public IEnumerable<GiBook> List()
         {
             return _dbcontext.GiBooks;
@@ -40,7 +40,7 @@ namespace GiBook.API.Controllers
         /// GiBook会への参加表明
         /// </summary>
         /// <returns></returns>
-        [HttpPost("regist")]
+        [HttpPost]
         public bool Regist(GiBook gibook)
         {
             gibook =
@@ -50,7 +50,6 @@ namespace GiBook.API.Controllers
                     Book = new Book() { Name = "test 001" }
                 };
             _dbcontext.GiBooks.Add (gibook);
-            _dbcontext.SaveChangesAsync();
             return true;
         }
     }
