@@ -50,8 +50,8 @@ namespace GiBook.API.Controllers
                 new GiBook()
                 {
                     GiBookId = new Guid(),
-                    GiverId = "841dfcf7-b78e-44da-a550-6a3363f6bb8b",
-                    RecieverId = "6001c6f4-f309-4d0c-ad72-fed26fa41311",
+                    GiverId = gibook.GiverId,
+                    RecieverId = null,
                     // BookId = new Guid(),
                     LocationId =
                         new Guid("570a07ad-bb94-4471-8071-56accbb9e8f2")

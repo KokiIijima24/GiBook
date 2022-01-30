@@ -24,6 +24,9 @@ export default function Regist() {
     console.log(bookTitle)
     baseRepository.post('gibook/regist', {
       giverId: User.id,
+      giver: {
+        email: User.email
+      }
     })
   }
 
