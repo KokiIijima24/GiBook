@@ -8,7 +8,7 @@ function createAxiosInstance() {
     // この第一引数オブジェクトで設定を定義
 
     // axios で通信する時の URL の頭を決める。大体ドメインとAPI用URL接頭辞
-    baseURL: 'https://localhost:5001',
+    baseURL: 'https://localhost:7042/',
   })
 
   // interceptors.request.use で送信時に引数に入れた関数が動作する

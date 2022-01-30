@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import { baseRepository } from '../api/auth'
 import { isAuthSelector } from '../store/auth'
 
-import EditUserModal from '../components/Modal/EditUserModal'
 
 const Home = () => {
   //const user_info = useSelector((state) => state.user)
@@ -44,7 +43,6 @@ const Home = () => {
                 <td className='border px-4 py-2'>{user.displayName}</td>
                 <td className='border px-4 py-2'>{user.userName}</td>
                 <td>
-                  <EditUserModal />
                   <button
                     className='bg-red-500 text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
                     type='button'
