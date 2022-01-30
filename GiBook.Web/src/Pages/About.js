@@ -4,20 +4,17 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 const markdown = `
-### About Markdown
-A paragraph with *emphasis* and **strong importance**.
+### GiBookについて
+GiBookとは本を誰かにGiveすることを言います。
 
-> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
+GiBook会の参加者はアプリ上で誰かにGiveしたい書籍を登録することでGiBook会に参加することができます。
 
-* Lists
-* [ ] todo
-* [x] done
+GiBook会に参加すると誰かから本を受け取ることができます。
+誰から本を受け取れるかはアプリ上でマッチングされます。
 
-A table:
-
-| a | b |
-| - | - |
-| sample01 | sample 02 |
+|  | 日程 | 概要 |
+| - | - | - |
+| 1 | 2022年2月○日 | IT系技術書でGiBook会を開催予定 |
 `
 
 const About = () => {

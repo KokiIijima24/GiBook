@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import { baseRepository } from '../api/auth'
 import { isAuthSelector } from '../store/auth'
 
-
 const Home = () => {
   //const user_info = useSelector((state) => state.user)
   const isAuth = useSelector(isAuthSelector)
@@ -27,11 +26,10 @@ const Home = () => {
   return (
     <div>
       <h1>Home</h1>
-      <h3>ユーザーリスト</h3>
+      <h3>参加者リスト</h3>
       <table className='table-auto'>
         <thead>
           <tr>
-            <th className='px-4 py-2'>address</th>
             <th className='px-4 py-2'>user name</th>
             <th className='px-4 py-2'></th>
           </tr>
@@ -41,7 +39,6 @@ const Home = () => {
             return (
               <tr key={index}>
                 <td className='border px-4 py-2'>{user.displayName}</td>
-                <td className='border px-4 py-2'>{user.userName}</td>
                 <td>
                   <button
                     className='bg-red-500 text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'

@@ -31,7 +31,8 @@ namespace GiBook.API.Controllers
       return _dbContext.Users.Select(_ => 
       new UserDto(){
         Id = _.Id,
-        Iamge = null
+        Iamge = null,
+        DisplayName = _.UserName
       });
     }
   }
