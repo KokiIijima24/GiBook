@@ -41,16 +41,27 @@ namespace GiBook.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost("regist")]
-        public bool Regist(GiBook gibook)
+        public async Task<bool> RegistAsync()
         {
-            gibook =
+            var locationId = Guid.NewGuid();
+
+            var gibook =
                 new GiBook()
                 {
                     GiBookId = new Guid(),
-                    Book = new Book() { Name = "test 001" }
+                    GiverId = "841dfcf7-b78e-44da-a550-6a3363f6bb8b",
+                    RecieverId = "6001c6f4-f309-4d0c-ad72-fed26fa41311",
+                    // BookId = new Guid(),
+                    LocationId = new Guid("570a07ad-bb94-4471-8071-56accbb9e8f2")
                 };
+
+            var location =
+                new Location() { LocationId = locationId, Name = "TEST" };
+
+            // _dbcontext.Books.Add(gibook.Book);
+            _dbcontext.Locations.Add (location);
             _dbcontext.GiBooks.Add (gibook);
-            _dbcontext.SaveChangesAsync();
+            await _dbcontext.SaveChangesAsync();
             return true;
         }
     }

@@ -9,7 +9,9 @@ namespace GiBook.API.Data
 {
     public class ApplicationDbContext : IdentityDbContext<AppUser>
     {
-        public DbSet<GiBook> GiBooks { get; set; }
+      public DbSet<GiBook> GiBooks { get; set; }
+      public DbSet<Book> Books { get; set; }
+      public DbSet<Location> Locations { get; set; }
 
         public ApplicationDbContext(
             DbContextOptions<ApplicationDbContext> options

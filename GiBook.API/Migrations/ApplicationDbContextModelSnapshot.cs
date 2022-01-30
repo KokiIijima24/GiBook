@@ -34,7 +34,7 @@ namespace GiBook.API.Migrations
 
                     b.HasKey("BookId");
 
-                    b.ToTable("Book");
+                    b.ToTable("Books");
                 });
 
             modelBuilder.Entity("GiBook.API.GiBook", b =>
@@ -47,14 +47,12 @@ namespace GiBook.API.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("GiverId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<Guid>("LocationId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("RecieverId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("GiBookId");
@@ -82,7 +80,7 @@ namespace GiBook.API.Migrations
 
                     b.HasKey("LocationId");
 
-                    b.ToTable("Location");
+                    b.ToTable("Locations");
                 });
 
             modelBuilder.Entity("GiBook.API.Models.AppUser", b =>
@@ -293,9 +291,7 @@ namespace GiBook.API.Migrations
 
                     b.HasOne("GiBook.API.Models.AppUser", "Giver")
                         .WithMany()
-                        .HasForeignKey("GiverId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GiverId");
 
                     b.HasOne("GiBook.API.Location", "Location")
                         .WithMany()
@@ -305,9 +301,7 @@ namespace GiBook.API.Migrations
 
                     b.HasOne("GiBook.API.Models.AppUser", "Reciever")
                         .WithMany()
-                        .HasForeignKey("RecieverId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RecieverId");
 
                     b.Navigation("Book");
 
