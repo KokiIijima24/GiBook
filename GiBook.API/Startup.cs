@@ -48,7 +48,8 @@ namespace GiBook.API
                                 .AllowAnyMethod()
                                 .AllowAnyHeader()
                                 .WithOrigins(new string[] {
-                                    "http://localhost:3000"
+                                    "http://localhost:3000",
+                                    "http://localhost:3001"
                                 });
                         });
                 });

@@ -38,21 +38,23 @@ namespace GiBook.API.Controllers
 
         /// <summary>
         /// GiBook会への参加表明
+        /// ＞書籍名の登録
         /// </summary>
         /// <returns></returns>
         [HttpPost("regist")]
-        public async Task<bool> RegistAsync()
+        public async Task<bool> RegistAsync(GiBook gibook)
         {
             var locationId = Guid.NewGuid();
 
-            var gibook =
+            gibook =
                 new GiBook()
                 {
                     GiBookId = new Guid(),
                     GiverId = "841dfcf7-b78e-44da-a550-6a3363f6bb8b",
                     RecieverId = "6001c6f4-f309-4d0c-ad72-fed26fa41311",
                     // BookId = new Guid(),
-                    LocationId = new Guid("570a07ad-bb94-4471-8071-56accbb9e8f2")
+                    LocationId =
+                        new Guid("570a07ad-bb94-4471-8071-56accbb9e8f2")
                 };
 
             var location =
